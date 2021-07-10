@@ -63,13 +63,11 @@ $datas = $stmt->fetchAll();
                             <td><?php echo $data["deskripsi"] ?></td>
                             <td class="">
                                 <form class="row px-3" name="delete" id="delete" method="POST" action="delete.php">
-                                    <button type="button" class="col btn btn-primary" data-toggle="modal" data-target="#changeDataModal<?php echo $data["id"] ?>">
+                                    <button type="button" class="col btn btn-primary mr-1" data-toggle="modal" data-target="#changeDataModal<?php echo $data["id"] ?>">
                                         Edit
                                     </button>
-                                    <!-- <div class="form-group"> -->
-                                        <input type="hidden" class="form-control" id="id" name="id" aria-describedby="id" value="<?php echo $data["id"] ?>" required>
-                                        <button type="submit" class="col btn btn-danger" name="delete">Delete</button>
-                                    <!-- </div> -->
+                                    <input type="hidden" class="form-control" id="id" name="id" aria-describedby="id" value="<?php echo $data["id"] ?>" required>
+                                    <button type="submit" class="col btn btn-danger ml-1" name="delete">Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -77,10 +75,8 @@ $datas = $stmt->fetchAll();
                 </tbody>
             </table>
         </div>
-        <!-- Button trigger modal -->
 
 
-        <!-- Modal -->
         <div class="modal fade" id="addDataModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -142,6 +138,11 @@ $datas = $stmt->fetchAll();
                 </div>
             </div>
         <?php } ?>
+        <footer class="fixed-bottom text-black-50">
+            <div class="footer-copyright text-center py-3">Source:
+                <a href="https://github.com/Dzyfhuba/prakweb04.git/"> Dzyfhuba's Github Repository</a>
+            </div>
+        </footer>
     </div>
 </body>
 
